@@ -1,0 +1,420 @@
+Bài Tập 1: Kiểm Tra Số Dương, Âm Hoặc Bằng 0
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Nhập một số: ");
+        int num = int.Parse(Console.ReadLine());
+
+        if (num > 0)
+            Console.WriteLine("Số dương");
+        else if (num < 0)
+            Console.WriteLine("Số âm");
+        else
+            Console.WriteLine("Số bằng 0");
+    }
+}
+
+Bài Tập 2: Kiểm Tra Số Chẵn Hay Lẻ
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Nhập một số: ");
+        int num = int.Parse(Console.ReadLine());
+
+        if (num % 2 == 0)
+            Console.WriteLine("Số chẵn");
+        else
+            Console.WriteLine("Số lẻ");
+    }
+}
+
+Bài Tập 3: Kiểm Tra Điều Kiện Thi Đỗ
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Nhập điểm trung bình: ");
+        double diemTB = double.Parse(Console.ReadLine());
+
+        if (diemTB >= 5.0)
+            Console.WriteLine("Đã đỗ kỳ thi");
+        else
+            Console.WriteLine("Chưa đỗ kỳ thi");
+    }
+}
+
+Bài Tập 4: Tìm Số Lớn Nhất Trong Hai Số
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Nhập số thứ nhất: ");
+        int num1 = int.Parse(Console.ReadLine());
+
+        Console.Write("Nhập số thứ hai: ");
+        int num2 = int.Parse(Console.ReadLine());
+
+        if (num1 > num2)
+            Console.WriteLine($"Số lớn nhất là: {num1}");
+        else if (num2 > num1)
+            Console.WriteLine($"Số lớn nhất là: {num2}");
+        else
+            Console.WriteLine("Hai số bằng nhau");
+    }
+}
+
+Bài Tập 5: Kiểm Tra Điều Kiện Mua Hàng
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Nhập số tiền của bạn: ");
+        double tien = double.Parse(Console.ReadLine());
+
+        Console.Write("Nhập giá sản phẩm: ");
+        double giaSanPham = double.Parse(Console.ReadLine());
+
+        if (tien >= giaSanPham)
+            Console.WriteLine("Bạn có thể mua hàng");
+        else
+            Console.WriteLine("Bạn không đủ tiền để mua hàng");
+    }
+}
+
+Bài Tập 6: Kiểm Tra Năm Nhuận
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Nhập năm: ");
+        int nam = int.Parse(Console.ReadLine());
+
+        if ((nam % 4 == 0 && nam % 100 != 0) || (nam % 400 == 0))
+            Console.WriteLine("Năm nhuận");
+        else
+            Console.WriteLine("Không phải năm nhuận");
+    }
+}
+
+Bài Tập 7: Tính Giá Vé Xem Phim
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Nhập độ tuổi: ");
+        int tuoi = int.Parse(Console.ReadLine());
+
+        if (tuoi < 18)
+            Console.WriteLine("Giá vé: 50,000 đồng");
+        else
+            Console.WriteLine("Giá vé: 100,000 đồng");
+    }
+}
+
+Bài Tập 8: Kiểm Tra Học Sinh Xuất Sắc
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Nhập điểm trung bình: ");
+        double diemTB = double.Parse(Console.ReadLine());
+
+        if (diemTB >= 9.0)
+            Console.WriteLine("Học sinh xuất sắc");
+        else
+            Console.WriteLine("Không phải học sinh xuất sắc");
+    }
+}
+
+Bài Tập 9: So Sánh Ba Số
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Nhập số thứ nhất: ");
+        int num1 = int.Parse(Console.ReadLine());
+
+        Console.Write("Nhập số thứ hai: ");
+        int num2 = int.Parse(Console.ReadLine());
+
+        Console.Write("Nhập số thứ ba: ");
+        int num3 = int.Parse(Console.ReadLine());
+
+        int max = num1;
+
+        if (num2 > max)
+            max = num2;
+        if (num3 > max)
+            max = num3;
+
+        Console.WriteLine($"Số lớn nhất là: {max}");
+    }
+}
+
+Bài Tập 10: Tính Tiền Lương
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Nhập số giờ làm việc: ");
+        int gioLam = int.Parse(Console.ReadLine());
+        double luong = 100000; // Lương cơ bản
+
+        if (gioLam > 40)
+        {
+            luong += (gioLam - 40) * 2 * 100000; // Lương làm thêm
+        }
+
+        Console.WriteLine($"Tiền lương là: {luong} đồng");
+    }
+}
+
+Bài Tập 11: Kiểm Tra Điều Kiện Vào Câu Lạc Bộ
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Nhập tuổi: ");
+        int tuoi = int.Parse(Console.ReadLine());
+
+        Console.Write("Có thẻ thành viên? (y/n): ");
+        char theThanhVien = char.Parse(Console.ReadLine());
+
+        if (tuoi > 18 && theThanhVien == 'y')
+            Console.WriteLine("Bạn có thể vào câu lạc bộ");
+        else
+            Console.WriteLine("Bạn không thể vào câu lạc bộ");
+    }
+}
+
+Bài Tập 12: Phân Loại Học Sinh
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Nhập điểm trung bình: ");
+        double diemTB = double.Parse(Console.ReadLine());
+
+        if (diemTB >= 9.0)
+            Console.WriteLine("Học sinh xuất sắc");
+        else if (diemTB >= 8.0)
+            Console.WriteLine("Học sinh giỏi");
+        else if (diemTB >= 7.0)
+            Console.WriteLine("Học sinh khá");
+        else if (diemTB >= 5.0)
+            Console.WriteLine("Học sinh trung bình");
+        else
+            Console.WriteLine("Học sinh yếu");
+    }
+}
+
+Bài Tập 13: Tính Tiền Điện
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Nhập số điện tiêu thụ (kWh): ");
+        double soDien = double.Parse(Console.ReadLine());
+
+        double giaTien = 0;
+        if (soDien <= 100)
+            giaTien = soDien * 1500;
+        else
+            giaTien = 100 * 1500 + (soDien - 100) * 2000;
+
+        Console.WriteLine($"Tiền điện phải trả: {giaTien} đồng");
+    }
+}
+
+Bài Tập 14: Kiểm Tra Điều Kiện Thăng Chức
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Nhập số năm làm việc: ");
+        int soNamLamViec = int.Parse(Console.ReadLine());
+
+        Console.Write("Đánh giá công việc (tốt/xấu): ");
+        string danhGia = Console.ReadLine().ToLower();
+
+        if (soNamLamViec > 5 && danhGia == "tốt")
+            Console.WriteLine("Nhân viên đủ điều kiện thăng chức");
+        else
+            Console.WriteLine("Nhân viên không đủ điều kiện thăng chức");
+    }
+}
+
+Bài Tập 15: Kiểm Tra Điều Kiện Miễn Phí Vận Chuyển
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Nhập giá trị đơn hàng: ");
+        double giaTriDonHang = double.Parse(Console.ReadLine());
+
+        if (giaTriDonHang >= 500000)
+            Console.WriteLine("Được miễn phí vận chuyển");
+        else
+            Console.WriteLine("Không được miễn phí vận chuyển");
+    }
+}
+
+Bài Tập 16: Tính Thuế Thu Nhập Cá Nhân
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Nhập thu nhập: ");
+        double thuNhap = double.Parse(Console.ReadLine());
+
+        double thue = 0;
+        if (thuNhap <= 10000000)
+            thue = thuNhap * 0.05;
+        else if (thuNhap <= 20000000)
+            thue = thuNhap * 0.1;
+        else
+            thue = thuNhap * 0.2;
+
+        Console.WriteLine($"Thuế thu nhập phải trả: {thue} đồng");
+    }
+}
+
+Bài Tập 17: Tính Điểm Trung Bình Của Môn Học
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Nhập điểm bài kiểm tra 1: ");
+        double diem1 = double.Parse(Console.ReadLine());
+
+        Console.Write("Nhập điểm bài kiểm tra 2: ");
+        double diem2 = double.Parse(Console.ReadLine());
+
+        Console.Write("Nhập điểm bài kiểm tra 3: ");
+        double diem3 = double.Parse(Console.ReadLine());
+
+        double diemTB = (diem1 + diem2 + diem3) / 3;
+
+        if (diemTB >= 5.0)
+            Console.WriteLine($"Điểm trung bình là: {diemTB} - Đạt");
+        else
+            Console.WriteLine($"Điểm trung bình là: {diemTB} - Chưa đạt");
+    }
+}
+
+Bài Tập 18: Kiểm Tra Điều Kiện Nhập Hàng
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Nhập số lượng hàng hiện tại: ");
+        int soLuongHienTai = int.Parse(Console.ReadLine());
+
+        Console.Write("Kho còn chỗ không? (y/n): ");
+        char khoConCho = char.Parse(Console.ReadLine());
+
+        if (soLuongHienTai < 100 && khoConCho == 'y')
+            Console.WriteLine("Có thể nhập thêm hàng");
+        else
+            Console.WriteLine("Không thể nhập thêm hàng");
+    }
+}
+
+Bài Tập 19: Tìm Số Lớn Hơn 10
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Nhập một số: ");
+        int num = int.Parse(Console.ReadLine());
+
+        if (num > 10)
+            Console.WriteLine("Số lớn hơn 10");
+        else
+            Console.WriteLine("Số không lớn hơn 10");
+    }
+}
+
+Bài Tập 20: Kiểm Tra Điều Kiện Đăng Ký Khóa Học
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Đã hoàn thành khóa học cơ bản? (y/n): ");
+        char hoanThanhKhoaHoc = char.Parse(Console.ReadLine());
+
+        Console.Write("Điểm tổng kết: ");
+        double diemTongKet = double.Parse(Console.ReadLine());
+
+        Console.Write("Có thư giới thiệu từ giáo viên? (y/n): ");
+        char thuGioiThieu = char.Parse(Console.ReadLine());
+
+        if (hoanThanhKhoaHoc == 'y' && diemTongKet >= 7.0 && thuGioiThieu == 'y')
+            Console.WriteLine("Có thể đăng ký khóa học nâng cao");
+        else
+            Console.WriteLine("Không thể đăng ký khóa học nâng cao");
+    }
+}
+
